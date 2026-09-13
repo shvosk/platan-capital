@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-page text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-display font-medium;
+  }
+
+  /* Visible keyboard focus everywhere — brand restraint doesn't mean
+     invisible focus states. */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid theme('colors.ink');
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* The fine rule — Platan's one recurring structural device */
+  .rule {
+    @apply border-l border-line;
+  }
+
+  .label {
+    @apply text-label font-sans uppercase tracking-[0.16em] text-muted;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-accent text-page px-6 py-3.5 text-label font-sans uppercase tracking-[0.14em] hover:bg-ink transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center border border-ink text-ink px-6 py-3.5 text-label font-sans uppercase tracking-[0.14em] hover:bg-ink hover:text-page transition-colors;
+  }
+}

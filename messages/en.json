@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "approach": "Approach",
+    "strategy": "Strategy",
+    "insights": "Insights",
+    "contact": "Contact",
+    "investorAccess": "Investor Access"
+  },
+  "footer": {
+    "firmColumn": "Firm",
+    "contactColumn": "Contact",
+    "email": "hello@platan.am",
+    "location": "Yerevan, Armenia",
+    "copyrightName": "PLATAN CAPITAL MANAGEMENT",
+    "disclaimer": "FOR PROFESSIONAL & QUALIFIED INVESTORS ONLY",
+    "regulatoryColumn": "Regulatory"
+  },
+  "home": {
+    "eyebrow": "Private Investment Office · Est. MMXXVI",
+    "headlineLead": "Compounding patience across",
+    "headlineEmphasis": "generations",
+    "body": "Platan Capital Management stewards the capital of professional and qualified investors with a single mandate: durable, long-horizon growth.",
+    "ctaPrimary": "Request an introduction",
+    "ctaSecondary": "Our approach",
+    "principles": [
+      {
+        "title": "Long horizon",
+        "body": "Decades, not quarters. We invest as owners."
+      },
+      {
+        "title": "Discretion",
+        "body": "Private by default. Reporting that respects your time."
+      },
+      {
+        "title": "Alignment",
+        "body": "Our capital sits beside yours, under one mandate."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Get in touch",
+    "emailLabel": "Email",
+    "addressLabel": "Office"
+  },
+  "regulatory": {
+    "navLabel": "Regulatory Information",
+    "heading": "Regulatory Information",
+    "intro": "Disclosures required of financial companies operating in the Republic of Armenia, published per Central Bank of Armenia Regulation 8/03.",
+    "lastUpdated": "Last updated",
+    "pendingNote": "Content pending — to be completed once applicable disclosure requirements are confirmed with counsel.",
+    "sections": [
+      {
+        "key": "about",
+        "title": "About the Company"
+      },
+      {
+        "key": "reports",
+        "title": "Reports"
+      },
+      {
+        "key": "services",
+        "title": "Services Provided"
+      },
+      {
+        "key": "shareholders",
+        "title": "Shareholders & Investors"
+      },
+      {
+        "key": "regulation",
+        "title": "Regulation"
+      },
+      {
+        "key": "feedback",
+        "title": "Feedback"
+      },
+      {
+        "key": "customerRights",
+        "title": "Customer Rights"
+      },
+      {
+        "key": "mediator",
+        "title": "Financial System Mediator"
+      }
+    ]
+  }
+}
