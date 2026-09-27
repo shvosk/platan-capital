@@ -8,16 +8,14 @@ import {
 // Latin/Cyrillic pairing — used for EN and RU.
 // Display: Cormorant Garamond (headlines, wordmark, numerals)
 // Sans: Archivo (body, labels, UI)
-export const cormorant = Cormorant_Garamond({
-  subsets: ['latin', 'cyrillic'],
+  subsets: ['latin'],,
   weight: ['400', '500', '600'],
   style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
 });
 
-export const archivo = Archivo({
-  subsets: ['latin', 'cyrillic'],
+  subsets: ['latin'],,
   weight: ['400', '500', '600', '700'],
   variable: '--font-sans',
   display: 'swap',
