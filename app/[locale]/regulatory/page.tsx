@@ -6,18 +6,6 @@ import type { Locale } from '@/i18n';
 
 export const revalidate = 60;
 
-// Hub page for disclosures potentially required under CBA Regulation 8/03
-// (Chapter 4, point 16) — About, Reports, Services, Shareholders &
-// Investors, Regulation, Feedback, Customer Rights, Financial Mediator.
-//
-// Whether this regulation applies to Platan depends on its licensing
-// status and whether it offers services to individuals via public offer
-// (see Reg. 8/03 point 5.1) — confirm with counsel before treating this
-// page as satisfying the requirement. Content pulls from a Sanity `page`
-// document (slug: "regulatory") keyed by section `key`; any of the eight
-// required sections without matching Sanity content falls back to a
-// placeholder so the page structure is complete even before real content
-// is filled in.
 export default async function RegulatoryPage({ params: { locale } }: { params: { locale: Locale } }) {
   const t = useTranslations('regulatory');
   const page = await client.fetch(pageBySlugQuery, { slug: 'regulatory' });
@@ -43,8 +31,6 @@ export default async function RegulatoryPage({ params: { locale } }: { params: {
         </p>
       )}
 
-      {/* In-page table of contents — direct anchor links, not a dropdown,
-          per Reg. 8/03 point 16's "not via a collapsing menu" requirement. */}
       <nav className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-y border-line py-4 font-sans text-label uppercase tracking-[0.14em] text-muted">
         {requiredSections.map((s) => (
           <a key={s.key} href={`#${s.key}`} className="hover:text-ink">
@@ -56,7 +42,7 @@ export default async function RegulatoryPage({ params: { locale } }: { params: {
       <div className="mt-4 divide-y divide-line">
         {requiredSections.map((required) => {
           const match = sanitySections.find((s) => s.key === required.key);
-          const heading = match ? pick(match.heading, locale) : required.title;
+          const heading: string = (match ? pick(match.heading, locale) : required.title) ?? required.title;
           const hasBody = match?.body?.[locale] || match?.body?.en;
 
           return (
