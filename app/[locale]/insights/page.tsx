@@ -3,8 +3,6 @@ import { pageBySlugQuery } from '@/sanity/lib/queries';
 import { pick } from '@/sanity/lib/locale';
 import type { Locale } from '@/i18n';
 
-export const revalidate = 60;
-
 export default async function InsightsPage({ params: { locale } }: { params: { locale: Locale } }) {
   const page = await client.fetch(pageBySlugQuery, { slug: 'insights' });
 
