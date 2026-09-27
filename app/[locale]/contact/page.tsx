@@ -11,8 +11,8 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
   const fallback = useTranslations('footer');
   const settings = await client.fetch(siteSettingsQuery);
 
-  const email = settings?.email ?? fallback('email');
-  const address = pick(settings?.officeAddress, locale) ?? fallback('location');
+  const email: string = settings?.email ?? fallback('email');
+  const address: string = pick(settings?.officeAddress, locale) ?? fallback('location');
 
   return (
     <section className="mx-auto max-w-content px-6 py-20 lg:px-10">
