@@ -22,23 +22,18 @@ export default async function LocaleLayout({
 }) {
   const messages = await getMessages();
 
-  // Armenian gets Noto Serif/Sans Armenian; EN and RU get Cormorant
-  // Garamond + Archivo. Both pairings expose the same CSS variable
-  // names, so nothing downstream needs to branch on locale for type.
   const fontVars =
     locale === 'am'
       ? `${notoSerifArmenian.variable} ${notoSansArmenian.variable}`
       : `${cormorant.variable} ${archivo.variable}`;
 
   return (
-    <html lang={locale} className={fontVars}>
-      <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header locale={locale} />
-          <main>{children}</main>
-          <Footer locale={locale} />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <div lang={locale} className={fontVars}>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        <Header locale={locale} />
+        <main>{children}</main>
+        <Footer locale={locale} />
+      </NextIntlClientProvider>
+    </div>
   );
 }
