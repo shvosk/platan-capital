@@ -16,7 +16,7 @@ export default async function OurServicesPage({
   const fallbackTitle = items.find((i) => i.slug === slug)?.label ?? slug;
 
   const page = await client.fetch(pageBySlugQuery, { slug: `our-services/${slug}` });
-  const title = page?.title ? pick(page.title, locale) : fallbackTitle;
+  const title: string = (page?.title ? pick(page.title, locale) : fallbackTitle) ?? fallbackTitle;
 
   return (
     <section className="mx-auto max-w-content px-6 py-20 lg:px-10">
