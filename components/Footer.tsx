@@ -3,13 +3,18 @@ import Link from 'next/link';
 import type { Locale } from '@/i18n';
 import Logo from './Logo';
 
+type NavItem = { label: string; slug: string };
+
 // Footer: reversed lockup on Nocturne Navy, two link columns, and the
-// regulatory line — the disclaimer is fixed brand copy, always present.
+// regulatory line. Firm column links to the first item of each nav group.
 export default function Footer({ locale }: { locale: Locale }) {
   const t = useTranslations('footer');
   const tNav = useTranslations('nav');
   const tReg = useTranslations('regulatory');
   const year = new Date().getFullYear();
+
+  const whoWeAreItems = tNav.raw('whoWeAreItems') as NavItem[];
+  const ourServicesItems = tNav.raw('ourServicesItems') as NavItem[];
 
   return (
     <footer className="bg-ink text-page">
@@ -22,10 +27,14 @@ export default function Footer({ locale }: { locale: Locale }) {
               <p className="label mb-3 text-accent">{t('firmColumn')}</p>
               <ul className="space-y-2 font-display text-lg">
                 <li>
-                  <Link href={`/${locale}/approach`}>{tNav('approach')}</Link>
+                  <Link href={`/${locale}/who-we-are/${whoWeAreItems[0]?.slug}`}>
+                    {tNav('whoWeAre')}
+                  </Link>
                 </li>
                 <li>
-                  <Link href={`/${locale}/strategy`}>{tNav('strategy')}</Link>
+                  <Link href={`/${locale}/our-services/${ourServicesItems[0]?.slug}`}>
+                    {tNav('ourServices')}
+                  </Link>
                 </li>
               </ul>
             </div>
