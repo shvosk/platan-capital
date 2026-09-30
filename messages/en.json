@@ -1,9 +1,20 @@
 {
   "nav": {
-    "approach": "Approach",
-    "strategy": "Strategy",
-    "insights": "Insights",
-    "contact": "Contact",
+    "whoWeAre": "Who We Are",
+    "whoWeAreItems": [
+      { "label": "Mission & Goals", "slug": "mission-and-goals" },
+      { "label": "Structure", "slug": "structure" },
+      { "label": "Leaders", "slug": "leaders" },
+      { "label": "Business Conduct & Ethics", "slug": "ethics" },
+      { "label": "News", "slug": "news" },
+      { "label": "Documents", "slug": "documents" }
+    ],
+    "ourServices": "Our Services",
+    "ourServicesItems": [
+      { "label": "Brokerage Services", "slug": "brokerage" },
+      { "label": "Foreign Currency Buying and Selling", "slug": "fx-buying-selling" },
+      { "label": "Securities Custody", "slug": "securities-custody" }
+    ],
     "investorAccess": "Investor Access"
   },
   "footer": {
@@ -13,7 +24,7 @@
     "location": "Yerevan, Armenia",
     "copyrightName": "PLATAN CAPITAL MANAGEMENT",
     "disclaimer": "FOR PROFESSIONAL & QUALIFIED INVESTORS ONLY",
-    "regulatoryColumn": "Regulatory"
+    "regulatoryColumn": "Regulation"
   },
   "home": {
     "eyebrow": "Private Investment Office · Est. MMXXVI",
@@ -23,18 +34,9 @@
     "ctaPrimary": "Request an introduction",
     "ctaSecondary": "Our approach",
     "principles": [
-      {
-        "title": "Long horizon",
-        "body": "Decades, not quarters. We invest as owners."
-      },
-      {
-        "title": "Discretion",
-        "body": "Private by default. Reporting that respects your time."
-      },
-      {
-        "title": "Alignment",
-        "body": "Our capital sits beside yours, under one mandate."
-      }
+      { "title": "Long horizon", "body": "Decades, not quarters. We invest as owners." },
+      { "title": "Discretion", "body": "Private by default. Reporting that respects your time." },
+      { "title": "Alignment", "body": "Our capital sits beside yours, under one mandate." }
     ]
   },
   "contact": {
@@ -49,38 +51,14 @@
     "lastUpdated": "Last updated",
     "pendingNote": "Content pending — to be completed once applicable disclosure requirements are confirmed with counsel.",
     "sections": [
-      {
-        "key": "about",
-        "title": "About the Company"
-      },
-      {
-        "key": "reports",
-        "title": "Reports"
-      },
-      {
-        "key": "services",
-        "title": "Services Provided"
-      },
-      {
-        "key": "shareholders",
-        "title": "Shareholders & Investors"
-      },
-      {
-        "key": "regulation",
-        "title": "Regulation"
-      },
-      {
-        "key": "feedback",
-        "title": "Feedback"
-      },
-      {
-        "key": "customerRights",
-        "title": "Customer Rights"
-      },
-      {
-        "key": "mediator",
-        "title": "Financial System Mediator"
-      }
+      { "key": "about", "title": "About the Company" },
+      { "key": "reports", "title": "Reports" },
+      { "key": "services", "title": "Services Provided" },
+      { "key": "shareholders", "title": "Shareholders & Investors" },
+      { "key": "regulation", "title": "Regulation" },
+      { "key": "feedback", "title": "Feedback" },
+      { "key": "customerRights", "title": "Customer Rights" },
+      { "key": "mediator", "title": "Financial System Mediator" }
     ]
   }
 }
